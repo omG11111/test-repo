@@ -12,7 +12,7 @@ app.get("/",async (req,res)=>{
     res.send("asdfffffffff")
 })
 app.post("/any",async (req,res)=>{
-    console.log("hitterdddd seccess",req.ip);
+    // console.log("hitterdddd seccess",req.ip);
 
     
     let user = new User({
