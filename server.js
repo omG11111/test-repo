@@ -12,7 +12,7 @@ app.get("/",async (req,res)=>{
     res.send("asdfffffffff")
 })
 app.post("/any",async (req,res)=>{
-    console.log("hitterdddd seccess",req);
+    console.log("hitterdddd seccess",req.ip);
 
     
     let user = new User({
@@ -21,11 +21,12 @@ app.post("/any",async (req,res)=>{
     })
     let use=await user.save();
   
-    let useq=await User.insertOne({
-        name:req.body.name,
-        email:"sec"
-    })
-    res.send(useq,use)
+    // let useq=await User.insertOne({
+    //     name:req.body.name,
+    //     email:"sec"
+    // })
+    // res.send(useq,use)
+    res.send("hello")
     
 })
 
