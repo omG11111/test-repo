@@ -19,7 +19,7 @@ app.post("/any",async (req,res)=>{
         name:req.body.name,
         email:req.body.email
     })
-    user.save()
+    await user.save();
     res.json(user);
 
     // try {
