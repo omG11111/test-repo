@@ -17,10 +17,10 @@ app.post("/any",(req,res)=>{
         name:"SAdsada",
         email:"om@gmail.com"
     })
-    user.save().then((data)=>{
+    user.save().then(()=>{
         res.json({
             message :"Seccess fully addd",
-            data:data
+            data:user
         })
         
     }).catch(err=>{
