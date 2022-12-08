@@ -1,4 +1,5 @@
 const app=require("express")();
+require("dotenv").config
 const bodyParser=require("express").json;
 const port = process.env.PORT || 3000;
 const User=require("./models/User")
