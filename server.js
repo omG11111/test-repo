@@ -21,7 +21,7 @@ app.post("/any",(req,res)=>{
         res.json({
             message :"Seccess fully addd",
             data:user
-        }).catch(err=>{
+        }).catch((err)=>{
             res.json({
                 message:"fail",
                 error:err
