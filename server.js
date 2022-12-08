@@ -6,7 +6,7 @@ const cors=require("cors");
 // const db=require("./config/db");
 
 
-require("dotenv").load();
+// require("dotenv").load();
 const mongoose=require("mongoose");
 mongoose.set('strictQuery', false);
 
