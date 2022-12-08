@@ -20,18 +20,20 @@ app.post("/any",async (req,res)=>{
     })
     // user.save()
     // res.json(user);
-    await user.save().then(()=>{
-        res.json({
-            message :"Seccess fully addd",
-            data:user
-        })
+    try {
+        await user.save().then((dataa)=>{
+            res.json({
+                message :"Seccess fully addd",
+                data:dataa
+            })})
         
-    }).catch((err)=>{
+    } catch (error) {
         res.json({
             message:"fail",
             error:err
         })
-    })
+        
+    }
     
 })
 
