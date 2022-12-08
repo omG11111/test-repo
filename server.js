@@ -8,7 +8,7 @@ const cors=require("cors");
 
 app.use(bodyParser())
 app.use(cors());
-app.get("",(req,res)=>{
+app.get("/",(req,res)=>{
     res.send("asdfffffffff")
 })
 app.post("/any",(req,res)=>{
