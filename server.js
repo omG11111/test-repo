@@ -20,8 +20,8 @@ app.post("/any",async (req,res)=>{
         email:req.body.email
     })
     user.save()
-
     res.json(user);
+
     // try {
     //     await user.save();
     //         res.json({
