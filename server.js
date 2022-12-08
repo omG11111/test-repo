@@ -26,21 +26,6 @@ app.post("/any",async (req,res)=>{
         email:"sec"
     })
     res.send(useq)
-
-    // try {
-    //     await user.save();
-    //         res.json({
-    //             message :"Seccess fully addd",
-                
-    //         })
-        
-    // } catch (erro) {
-    //     res.json({
-    //         message:"fail",
-    //         error:erro
-    //     })
-        
-    // }
     
 })
 
