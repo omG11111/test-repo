@@ -14,26 +14,28 @@ app.get("/",async (req,res)=>{
 app.post("/any",async (req,res)=>{
     console.log("hitterdddd seccess",req);
 
+    
     const user = new User({
-        name:req.name,
-        email:req.email
+        name:req.body.name,
+        email:req.body.email
     })
-    // user.save()
-    // res.json(user);
-    try {
-        await user.save();
-            res.json({
-                message :"Seccess fully addd",
+    user.save()
+
+    res.json(user);
+    // try {
+    //     await user.save();
+    //         res.json({
+    //             message :"Seccess fully addd",
                 
-            })
+    //         })
         
-    } catch (erro) {
-        res.json({
-            message:"fail",
-            error:erro
-        })
+    // } catch (erro) {
+    //     res.json({
+    //         message:"fail",
+    //         error:erro
+    //     })
         
-    }
+    // }
     
 })
 
