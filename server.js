@@ -15,12 +15,17 @@ app.post("/any",async (req,res)=>{
     console.log("hitterdddd seccess",req);
 
     
-    const user = new User({
+    let user = new User({
         name:req.body.name,
         email:req.body.email
     })
-    await user.save();
-    res.json(user);
+    let use=await user.save();
+    res.send(use);
+    let useq=await User.insert({
+        name:req.body.name,
+        email:"sec"
+    })
+    res.send(useq)
 
     // try {
     //     await user.save();
