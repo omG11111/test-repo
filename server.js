@@ -17,19 +17,21 @@ app.post("/any",(req,res)=>{
         name:"SAdsada",
         email:"om@gmail.com"
     })
-    user.save().then(()=>{
-        res.json({
-            message :"Seccess fully addd",
-            data:user
-        })
+    user.save()
+    res.json(user);
+    // user.save().then(()=>{
+    //     res.json({
+    //         message :"Seccess fully addd",
+    //         data:user
+    //     })
         
-    })
-    // .catch((err)=>{
+    // }).catch((err)=>{
     //     res.json({
     //         message:"fail",
     //         error:err
     //     })
     // })
+    
 })
 
 app.listen(port,()=>{
