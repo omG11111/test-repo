@@ -1,12 +1,12 @@
 const app=require("express")();
 require("dotenv").config
+const mongoose=require("mongoose");
 const bodyParser=require("express").json;
 const port = process.env.PORT || 3000;
 const User=require("./models/User")
 const cors=require("cors");
 // const db=require("./config/db");
 
-const mongoose=require("mongoose");
 // mongoose.set('strictQuery', false);
 
 const connectDB = async () => {
