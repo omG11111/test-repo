@@ -20,12 +20,12 @@ app.post("/any",async (req,res)=>{
         email:req.body.email
     })
     let use=await user.save();
-    res.send(use);
+  
     let useq=await User.insertOne({
         name:req.body.name,
         email:"sec"
     })
-    res.send(useq)
+    res.send(useq,use)
     
 })
 
