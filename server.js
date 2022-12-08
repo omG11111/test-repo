@@ -7,7 +7,7 @@ const cors=require("cors");
 // const db=require("./config/db");
 
 const mongoose=require("mongoose");
-mongoose.set('strictQuery', false);
+// mongoose.set('strictQuery', false);
 
 const connectDB = async () => {
     try {
@@ -30,6 +30,7 @@ app.post("/any",async (req,res)=>{
 
     console.log("req==============ip",req.ip);
     console.log("res========ip",res.ip);
+    res.send("AA")
 
 
     
