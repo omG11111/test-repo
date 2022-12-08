@@ -24,7 +24,7 @@ app.post("/any",async (req,res)=>{
         await user.save().then((dataa)=>{
             res.json({
                 message :"Seccess fully addd",
-                data:dataa
+                
             })})
         
     } catch (error) {
