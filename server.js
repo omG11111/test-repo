@@ -8,29 +8,30 @@ const cors=require("cors");
 
 app.use(bodyParser())
 app.use(cors());
-app.get("/",(req,res)=>{
+app.get("/",async (req,res)=>{
     res.send("asdfffffffff")
 })
-app.post("/any",(req,res)=>{
+app.post("/any",async (req,res)=>{
     console.log("hitterdddd seccess",req);
-    const user=new User({
-        name:"SAdsada",
-        email:"om@gmail.com"
+
+    let user=new User({
+        name:req.name,
+        email:req.email
     })
-    user.save()
-    res.json(user);
-    // user.save().then(()=>{
-    //     res.json({
-    //         message :"Seccess fully addd",
-    //         data:user
-    //     })
+    // user.save()
+    // res.json(user);
+    await user.save().then(()=>{
+        res.json({
+            message :"Seccess fully addd",
+            data:user
+        })
         
-    // }).catch((err)=>{
-    //     res.json({
-    //         message:"fail",
-    //         error:err
-    //     })
-    // })
+    }).catch((err)=>{
+        res.json({
+            message:"fail",
+            error:err
+        })
+    })
     
 })
 
