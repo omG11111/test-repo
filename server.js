@@ -1,4 +1,4 @@
-require("./config/db")
+const db=require("./config/db");
 const app=require("express")();
 const bodyParser=require("express").json;
 const port = process.env.PORT || 3000;
@@ -30,7 +30,12 @@ app.post("/any",async (req,res)=>{
     // res.send("hello")
     
 })
-
-app.listen(port,()=>{
-    console.log(`alive at ${port}`);
+// db.connectDB()
+// app.listen(port,()=>{
+//     console.log(`alive at ${port}`);
+// })
+db.connectDB().then(() => {
+    app.listen(port, () => {
+        console.log("listening for requests");
+    })
 })
