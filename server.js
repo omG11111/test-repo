@@ -1,9 +1,9 @@
-// const db=require("./config/db");
 const app=require("express")();
 const bodyParser=require("express").json;
 const port = process.env.PORT || 3000;
 const User=require("./models/User")
 const cors=require("cors");
+// const db=require("./config/db");
 
 
 require("dotenv").load();
