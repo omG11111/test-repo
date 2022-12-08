@@ -8,6 +8,9 @@ const cors=require("cors");
 
 app.use(bodyParser())
 app.use(cors());
+app.get("",(req,res)=>{
+    res.send("asdfffffffff")
+})
 app.post("/any",(req,res)=>{
     console.log("hitterdddd seccess",req);
     const user=new User({
