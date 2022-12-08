@@ -16,18 +16,18 @@ app.post("/any",async (req,res)=>{
     console.log("sd");
 
     
-    let user = new User({
-        name:req.body.name,
-        email:req.body.email
-    })
-    let use=await user.save();
-  
-    // let useq=await User.insertOne({
+    // let user = new User({
     //     name:req.body.name,
-    //     email:"sec"
+    //     email:req.body.email
     // })
-    // res.send(useq,use)
-    res.send("hello")
+    // let use=await user.save();
+  
+    // // let useq=await User.insertOne({
+    // //     name:req.body.name,
+    // //     email:"sec"
+    // // })
+    // // res.send(useq,use)
+    // res.send("hello")
     
 })
 
