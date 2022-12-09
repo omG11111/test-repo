@@ -55,8 +55,8 @@ app.post("/any",async (req,res)=>{
 // app.listen(port,()=>{
 //     console.log(`alive at ${port}`);
 // })
+app.listen(port, () => {
+    console.log("listening for requests");
+})
 connectDB().then(() => {
-    app.listen(port, () => {
-        console.log("listening for requests");
-    })
 })
