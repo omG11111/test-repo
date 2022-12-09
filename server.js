@@ -7,7 +7,7 @@ const User=require("./models/User")
 const cors=require("cors");
 // const db=require("./config/db");
 
-// mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', false);
 
 const connectDB = async () => {
     try {
