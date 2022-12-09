@@ -9,8 +9,8 @@ const cors=require("cors");
 // const db=require("./config/db");
 
 mongoose.set('strictQuery', false);
-const uri=process.env.MONGO_URI;
-const client = new MongoClient(uri);
+// const uri=process.env.MONGO_URI;
+// const client = new MongoClient(uri);
 
 const connectDB = async () => {
     try {
@@ -37,18 +37,19 @@ app.post("/any",async (req,res)=>{
 
 
     
-    // let user = new User({
-    //     name:req.body.name,
-    //     email:req.body.email
-    // })
-    // let use=await user.save();
+    let user = new User({
+        name:req.body.name,
+        email:req.body.email
+    })
+    await user.save();
   
-    // // let useq=await User.insertOne({
-    // //     name:req.body.name,
-    // //     email:"sec"
-    // // })
-    // // res.send(useq,use)
-    // res.send("hello")
+    // let useq=await User.insertOne({
+    //     name:req.body.name,
+    //     email:"sec"
+    // })
+    // res.send(useq,use)
+    res.json({message:"seccess",
+        data:user})
     
 })
 // db.connectDB()
